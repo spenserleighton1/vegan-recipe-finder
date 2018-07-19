@@ -1,3 +1,4 @@
+
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 apiKey food to fork ebcaa6a7b9e3268c9091ccc10a3839d3 
 # dependencies
@@ -17,5 +18,27 @@ apiKey food to fork ebcaa6a7b9e3268c9091ccc10a3839d3
 .env.production.local
 
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
