@@ -1,0 +1,12 @@
+.recipe-card {
+  width: 60vw;
+  height: 500px
+}
+
+.recipe-img {
+  height: 300px;
+}
+
+.recipe-link {
+  display: block;
+}
