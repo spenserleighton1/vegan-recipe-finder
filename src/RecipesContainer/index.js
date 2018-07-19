@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RecipeCard from '../RecipeCard';
-
+import './styles.css';
 
 class RecipesContainer extends Component {
   recipesToDisplay = () => (
@@ -12,7 +12,7 @@ class RecipesContainer extends Component {
 
 render() {
   return (
-    <div>{ this.recipesToDisplay() }</div>
+    <div className='recipes-container'>{ this.recipesToDisplay() }</div>
     )
   }
 }
