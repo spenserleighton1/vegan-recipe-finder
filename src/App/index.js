@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route, withRouter } from 'react-router-dom';
 import './styles.css';
 import { fetchRecipes } from '../helper/apiCalls';
 import { apiKey } from '../helper/apiKey';
@@ -32,4 +33,4 @@ export const mapDispatchToProps = (dispatch) => ({
   addRecipes: (recipes)=> dispatch(addRecipes(recipes))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
