@@ -6,6 +6,7 @@ import { fetchRecipes } from '../helper/apiCalls';
 import { apiKey } from '../helper/apiKey';
 import { cleanData } from '../helper/dataCleaner';
 import { addRecipes } from '../actions';
+import SingleRecipeContainer from '../SingleRecipeContainer'
 import RecipesContainer from '../RecipesContainer';
 import Header from '../Header'
 import Search from '../Search'
@@ -21,8 +22,9 @@ async componentDidMount() {
   render() {
     return (
       <div className="App">
-      <Header />
-      <Search />
+      <Route path='/' component={Header}/>
+      <Route path='/' component={Search}/>
+      <SingleRecipeContainer />
       <RecipesContainer />
       </div>
     );
