@@ -29,13 +29,8 @@ async componentDidMount() {
   }
 }
 
-export const mapStateToProps = (state) => ({
-  recipes: state.recipes,
-  ingredients: state.ingredients
-})
-
 export const mapDispatchToProps = (dispatch) => ({
   addRecipes: (recipes)=> dispatch(addRecipes(recipes))
 })
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(connect(null, mapDispatchToProps)(App));
