@@ -38,10 +38,8 @@ class Search extends Component {
     }
   }
 
-
 export const mapDispatchToProps = (dispatch) => ({
   addRecipes: (recipes)=> dispatch(addRecipes(recipes))
 })
-
 
 export default connect(null, mapDispatchToProps)(Search);
