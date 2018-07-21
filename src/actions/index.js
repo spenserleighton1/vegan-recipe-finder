@@ -3,7 +3,7 @@ export const addRecipes = (recipes) => ({
   recipes
 })
 
-export const searchByIngredient = (ingredients) => ({
-  type: 'SEARCH_BY_INGREDIENT', 
-  ingredients
+export const addSingleRecipe = (recipe) => ({
+  type: 'ADD_SINGLE_RECIPE', 
+  recipe
 })
