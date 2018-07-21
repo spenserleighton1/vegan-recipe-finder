@@ -29,11 +29,6 @@ async componentDidMount() {
   }
 }
 
-
-// export const mapStateToProps = (state) => ({
-//   recipes: state.recipes
-// })
-
 export const mapDispatchToProps = (dispatch) => ({
   addRecipes: (recipes)=> dispatch(addRecipes(recipes))
 })
