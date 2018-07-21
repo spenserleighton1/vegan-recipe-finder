@@ -1,5 +1,5 @@
 .recipe-card {
-  width: 60vw;
+  width: 30vw;
   height: 500px
 }
 
@@ -7,6 +7,6 @@
   height: 300px;
 }
 
-.recipe-link {
+.recipe-btn {
   display: block;
 }

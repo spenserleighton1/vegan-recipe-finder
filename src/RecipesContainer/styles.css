@@ -1,4 +1,7 @@
 .recipes-container {
+  height: 80vh;
+  overflow: auto;
+  width: 49vw;
   display: flex;
   flex-flow: column;
   justify-content: space-around; 

@@ -1,0 +1,11 @@
+.single-recipe {
+  float: right;
+  width: 30vw;
+}
+
+ul {
+    /*list-style-type: none;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    text-align: left;
+}

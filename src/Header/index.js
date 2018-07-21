@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <h1>Find that shit.</h1>
+    <h1 className='header'>Vegan Recipe Finder.</h1>
     )
 }
 
