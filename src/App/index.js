@@ -7,6 +7,8 @@ import { apiKey } from '../helper/apiKey';
 import { cleanData } from '../helper/dataCleaner';
 import { addRecipes } from '../actions';
 import RecipesContainer from '../RecipesContainer';
+import Header from '../Header'
+import Search from '../Search'
 
 class App extends Component {
 
@@ -19,6 +21,8 @@ async componentDidMount() {
   render() {
     return (
       <div className="App">
+      <Header />
+      <Search />
       <RecipesContainer />
       </div>
     );
@@ -26,7 +30,8 @@ async componentDidMount() {
 }
 
 export const mapStateToProps = (state) => ({
-  recipes: state.recipes
+  recipes: state.recipes,
+  ingredients: state.ingredients
 })
 
 export const mapDispatchToProps = (dispatch) => ({
