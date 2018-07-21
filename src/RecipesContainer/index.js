@@ -10,7 +10,7 @@ class RecipesContainer extends Component {
   fetchRecipe = async (key, id) => {
     const results = await fetchSingleRecipe(key,id)
     const recipe = await cleanRecipe(results)
-    console.log(recipe)
+    // console.log(recipe)
   }
 
   recipesToDisplay = () => (
