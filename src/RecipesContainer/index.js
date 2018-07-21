@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import RecipeCard from '../RecipeCard';
 import { fetchSingleRecipe } from '../helper/apiCalls'
 import { cleanRecipe } from '../helper/dataCleaner'
+import { addSingleRecipe } from '../actions'
 import './styles.css';
 
 class RecipesContainer extends Component {
@@ -10,7 +11,7 @@ class RecipesContainer extends Component {
   fetchRecipe = async (key, id) => {
     const results = await fetchSingleRecipe(key,id)
     const recipe = await cleanRecipe(results)
-    // console.log(recipe)
+    this.props.addSingleRecipe(recipe)
   }
 
   recipesToDisplay = () => (
@@ -32,4 +33,8 @@ export const mapStateToProps = (state) => ({
   recipes: state.recipes
 })
 
-export default connect(mapStateToProps)(RecipesContainer);
+export const mapDispatchToProps = (dispatch) => ({
+  addSingleRecipe: (recipe) => dispatch(addSingleRecipe(recipe))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(RecipesContainer);
