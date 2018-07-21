@@ -26,12 +26,12 @@ ShallowWrapper {
           className="recipe-img"
           src={undefined}
 />,
-        <a
-          className="recipe-link"
-          href={undefined}
+        <button
+          className="recipe-btn"
+          onClick={[Function]}
 >
-          View Recipe
-</a>,
+          view recipe
+</button>,
       ],
       "className": "recipe-card",
     },
@@ -67,13 +67,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "View Recipe",
-          "className": "recipe-link",
-          "href": undefined,
+          "children": "view recipe",
+          "className": "recipe-btn",
+          "onClick": [Function],
         },
         "ref": null,
-        "rendered": "View Recipe",
-        "type": "a",
+        "rendered": "view recipe",
+        "type": "button",
       },
     ],
     "type": "div",
@@ -93,12 +93,12 @@ ShallowWrapper {
             className="recipe-img"
             src={undefined}
 />,
-          <a
-            className="recipe-link"
-            href={undefined}
+          <button
+            className="recipe-btn"
+            onClick={[Function]}
 >
-            View Recipe
-</a>,
+            view recipe
+</button>,
         ],
         "className": "recipe-card",
       },
@@ -134,13 +134,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "View Recipe",
-            "className": "recipe-link",
-            "href": undefined,
+            "children": "view recipe",
+            "className": "recipe-btn",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": "View Recipe",
-          "type": "a",
+          "rendered": "view recipe",
+          "type": "button",
         },
       ],
       "type": "div",
