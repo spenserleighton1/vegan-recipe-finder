@@ -4,6 +4,7 @@ import { fetchRecipes } from '../helper/apiCalls';
 import { apiKey } from '../helper/apiKey';
 import { cleanData } from '../helper/dataCleaner';
 import { addRecipes } from '../actions';
+import './styles.css'
 
 class Search extends Component {
   constructor() {
@@ -30,9 +31,11 @@ class Search extends Component {
       <form
         onSubmit={ this.handleSubmit } >
         <input
+          className='search-input'
           type='text' 
           onChange={ this.handleChange } />
-        <button>Search</button>
+        <button
+          className='search-btn'>Search</button>
       </form>
       )
     }
