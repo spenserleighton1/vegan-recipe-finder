@@ -1,4 +1,5 @@
 .recipe-card {
+  margin: auto;
   font-family: 'Cinzel', serif;
   width: 30vw;
   height: 500px
@@ -13,13 +14,13 @@
   display: block;
   font-size: 18px;
   background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  color: green;
+  border: 2px solid green;
   border-radius: 4px;
   margin: auto;
 }
 
 .recipe-btn:hover {
-  border: 2px solid #F0ECF0;
-  color: #F0ECF0;
+  border: 2px solid darkgreen;
+  color: darkgreen;
 }
