@@ -9,7 +9,7 @@ class SingleRecipeContainer extends Component {
       const { title, publisher, ingredients, linkUrl, id } = this.props.recipe
       return(
         <div className='single-recipe'>
-          <h3>{ title }</h3>
+          <h2>{ title }</h2>
           <p>{ publisher }</p>
           <ul>
             { ingredients.map(ingredient => <li>{ ingredient }</li>)}
