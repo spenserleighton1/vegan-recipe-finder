@@ -1,6 +1,7 @@
 .recipes-container {
-  height: 80vh;
+  background:rgba(255,255,255, 0.8);
+  border-radius: 4px;
+  height: 70vh;
   overflow: auto;
-  width: 49vw;
-  justify-content: space-around; 
+  width: 40vw;
 }
