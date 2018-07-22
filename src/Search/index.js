@@ -6,7 +6,7 @@ import { cleanData } from '../helper/dataCleaner';
 import { addRecipes } from '../actions';
 import './styles.css'
 
-class Search extends Component {
+export class Search extends Component {
   constructor() {
     super()
 
