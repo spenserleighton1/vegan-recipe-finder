@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './styles.css'
 
-class SingleRecipeContainer extends Component {
+export class SingleRecipeContainer extends Component {
   
   render() {
     if(Object.keys(this.props.recipe).length > 0) {
@@ -12,7 +12,7 @@ class SingleRecipeContainer extends Component {
           <h2>{ title }</h2>
           <p>{ publisher }</p>
           <ul>
-            { ingredients.map(ingredient => <li>{ ingredient }</li>)}
+            { ingredients.map((ingredient, index) => <li key={ index }>{ ingredient }</li>)}
           </ul>
           <a href={ linkUrl }>Directions</a>
         </div>
