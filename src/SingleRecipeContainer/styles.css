@@ -1,4 +1,7 @@
 .single-recipe {
+  background:rgba(255,255,255, 0.8);
+  border-radius: 4px;
+  height: 70vh;
   float: right;
   width: 30vw;
 }

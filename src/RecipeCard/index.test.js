@@ -8,4 +8,12 @@ describe('RecipeCard', () => {
 
     expect(wrapper).toMatchSnapshot();
   })
+
+  it('should call fetchRecipe on click', () => {
+    const mockFetchRecipe = jest.fn()
+    const wrapper = shallow(<RecipeCard fetchRecipe={ mockFetchRecipe }/>)
+
+    wrapper.find('.recipe-btn').simulate('click')
+    expect(mockFetchRecipe).toHaveBeenCalled()
+  })
 })
