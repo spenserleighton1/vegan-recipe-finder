@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
-import './styles.css';
+import React, { Component } from 'react';
 import { fetchRecipes } from '../helper/apiCalls';
-import { apiKey } from '../helper/apiKey';
-import { cleanData } from '../helper/dataCleaner';
 import { addRecipes } from '../actions';
+import { cleanData } from '../helper/dataCleaner';
+import { connect } from 'react-redux';
+import { apiKey } from '../helper/apiKey';
 import SingleRecipeContainer from '../SingleRecipeContainer'
 import RecipesContainer from '../RecipesContainer';
 import Header from '../Header'
 import Search from '../Search'
+import './styles.css';
 
-class App extends Component {
+export class App extends Component {
 
 async componentDidMount() {
     const results = await fetchRecipes(apiKey);
