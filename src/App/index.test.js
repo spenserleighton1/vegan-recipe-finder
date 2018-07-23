@@ -1,24 +1,39 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import App, { mapDispatchToProps } from './';
+import { shallow, mount } from 'enzyme';
+import { App, mapDispatchToProps } from './';
 import { addRecipes } from '../actions';
+import { fetchRecipes } from '../helper/apiCalls';
+import { cleanData } from '../helper/dataCleaner';
+
+jest.mock('../helper/apiCalls');
+jest.mock('../helper/dataCleaner');
 
 describe('App', () => {
   it('should match the snapshot', () => {
-    const wrapper = shallow(<App />)
+    const mockAddRecipes = jest.fn();
+    const wrapper = shallow(<App addRecipes={ mockAddRecipes }/>)
 
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should call addRecipes on componentDidMount', async () => {
+    const mockAddRecipes = jest.fn();
+    const wrapper = shallow(<App addRecipes={ mockAddRecipes }/>);
+     
+    wrapper.instance().componentDidMount();
+    await expect(fetchRecipes).toHaveBeenCalled();
+  })
+
   describe('mapDispatchToProps', () => {
     it('should return propsObject', () => {
       const mockAddRecipes = jest.fn();
       const mockDispatch = jest.fn();
 
       const mappedProps = mapDispatchToProps(mockDispatch);
-      const actionToDispatch = addRecipes([{title: 'food'}])
+      const actionToDispatch = addRecipes([{title: 'food'}]);
 
-      mappedProps.addRecipes([{title: 'food'}])
-      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+      mappedProps.addRecipes([{title: 'food'}]);
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     })
   })
 })
