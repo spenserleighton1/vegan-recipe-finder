@@ -1,5 +1,5 @@
 import React from 'react';
-import { RecipesContainer, mapDispatchToProps } from './';
+import { RecipesContainer, mapDispatchToProps, mapStateToProps } from './';
 import { shallow, mount } from 'enzyme';
 import { addSingleRecipe } from '../actions';
 import { fetchSingleRecipe } from '../helper/apiCalls';
@@ -36,6 +36,17 @@ describe('RecipesContainer', () => {
 
       mappedProps.addSingleRecipe({ title: 'a recipe' });
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    })
+  })
+
+  describe('mapStateToProps', () => {
+    it('should return a props object', () => {
+      const mockState = {recipes: []};
+      const expected = {"recipes": []};
+
+      const mappedProps = mapStateToProps(mockState)
+
+      expect(mappedProps).toEqual(expected)
     })
   })
 })
