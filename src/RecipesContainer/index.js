@@ -6,7 +6,7 @@ import { cleanRecipe } from '../helper/dataCleaner'
 import { addSingleRecipe } from '../actions'
 import './styles.css';
 
-class RecipesContainer extends Component {
+export class RecipesContainer extends Component {
 
   fetchRecipe = async (key, id) => {
     const results = await fetchSingleRecipe(key,id)
