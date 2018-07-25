@@ -20,16 +20,42 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Route
-          component={[Function]}
-          path="/"
+        <Header
+          authUser={null}
 />,
-        <Route
-          component={[Function]}
-          path="/"
-/>,
+        <Connect(Search) />,
         <Connect(SingleRecipeContainer) />,
         <Connect(RecipesContainer) />,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/signUp"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/signIn"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/passwordForgetPage"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/home"
+/>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/account"
+/>,
       ],
       "className": "App",
     },
@@ -38,22 +64,9 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "component": [Function],
-          "path": "/",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "path": "/",
+          "authUser": null,
         },
         "ref": null,
         "rendered": null,
@@ -73,6 +86,93 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/signUp",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/signIn",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/passwordForgetPage",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/home",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/account",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -87,16 +187,42 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Route
-            component={[Function]}
-            path="/"
+          <Header
+            authUser={null}
 />,
-          <Route
-            component={[Function]}
-            path="/"
-/>,
+          <Connect(Search) />,
           <Connect(SingleRecipeContainer) />,
           <Connect(RecipesContainer) />,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/signUp"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/signIn"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/passwordForgetPage"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/home"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/account"
+/>,
         ],
         "className": "App",
       },
@@ -105,22 +231,9 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "component": [Function],
-            "path": "/",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "path": "/",
+            "authUser": null,
           },
           "ref": null,
           "rendered": null,
@@ -140,6 +253,93 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/signUp",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/signIn",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/passwordForgetPage",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/home",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/account",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
