@@ -44,9 +44,6 @@ async componentDidMount() {
     return (
       <div className="App">
         <Header authUser={ this.state.authUser } />
-        <Search />
-        <SingleRecipeContainer />
-        <RecipesContainer />
 
         <Route exact path={'/'} component={() => <LandingPage />} />
         <Route exact path={'/signUp'} component={() => <SignUpPage />} />
@@ -54,6 +51,9 @@ async componentDidMount() {
         <Route exact path={'/passwordForgetPage'} component={() => <PasswordForgetPage />} />
         <Route exact path={'/home'} component={() => <HomePage />} />
 
+        <Search />
+        <SingleRecipeContainer />
+        <RecipesContainer />
       </div>
     );
   }

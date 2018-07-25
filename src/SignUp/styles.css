@@ -1,0 +1,21 @@
+.sign-up {
+  border: 1px solid green;
+  background-color: white;
+  height: 18rem;
+  margin: auto;
+  width: 30rem;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button {
+  width: 10rem;
+}

@@ -1,19 +1,31 @@
 import React from 'react';
 import SignOutButton from '../SignOut';
+import { auth } from '../firebase';
 import './styles.css';
 import { Route, Link, withRouter } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ authUser }) => {
   return (
-  <div>
-    <h1 className='header'>????? Recipe Finder</h1>
-    <ul>
-      <li><Link to={'/signIn'}>Sign In</Link></li>
-      <li><Link to={'/'}>Landing</Link></li>
-      <li><Link to={'/home'}>Home</Link></li>
+    <div>
+      { authUser ? <HeaderAuth /> : <HeaderNonAuth /> } 
+    </div>
+  )
+}
 
-      <li><SignOutButton /></li>
-    </ul>
+const HeaderAuth = () => {
+  return (
+  <div className='header'>
+    <h1>Vegan Recipe Finder</h1>
+      <button className='header-btn' type="button" onClick={ () => {auth.doSignOut()}}>Sign Out</button>
+  </div>
+    )
+}
+
+const HeaderNonAuth = () => { 
+  return (
+  <div className='header'>
+    <h1>Vegan Recipe Finder</h1>
+    <Link className="header-link" to={'/signIn'}>Sign In</Link>
   </div>
     )
 }

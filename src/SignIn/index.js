@@ -3,11 +3,12 @@ import { withRouter } from 'react-router-dom';
 import { SignUpLink } from '../SignUp';
 
 import { auth } from '../firebase';
+import './styles.css'
 
 
 const SignInPage = ({ history }) =>
-  <div>
-    <h1>SignIn</h1>
+  <div className='sign-in'>
+    <h2>SignIn</h2>
     <SignInForm history={history} />
     <SignUpLink />
   </div>
@@ -41,7 +42,7 @@ class SignInForm extends Component {
         this.props.history.push('/');
       })
       .catch(error => {
-        this.setState({ 'error': error });
+        this.setState({ error: error.message });
       });
 
   }
@@ -75,6 +76,7 @@ class SignInForm extends Component {
         <button disabled={ isInvalid } type="submit">
           Sign In
         </button>
+        <p>{ this.state.error }</p>
       </form>
     );
   }
