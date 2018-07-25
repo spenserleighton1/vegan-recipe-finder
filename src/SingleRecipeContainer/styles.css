@@ -3,11 +3,12 @@
   border-radius: 4px;
   height: 70vh;
   float: right;
-  width: 30vw;
+  width: 40vw;
+  overflow: auto;
 }
 
 a {
-  color: white;
+  color: green;
 }
 
 ul {

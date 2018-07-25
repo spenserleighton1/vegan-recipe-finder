@@ -4,7 +4,8 @@ import { fetchRecipes } from '../helper/apiCalls';
 import { apiKey } from '../helper/apiKey';
 import { cleanData } from '../helper/dataCleaner';
 import { addRecipes } from '../actions';
-import './styles.css'
+import './styles.css';
+
 
 export class Search extends Component {
   constructor() {
