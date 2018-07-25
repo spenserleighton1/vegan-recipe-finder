@@ -1,0 +1,12 @@
+.sign-in {
+  border: 1px solid green;
+  background-color: white;
+  height: 15rem;
+  margin: auto;
+  width: 30rem;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+}
+
