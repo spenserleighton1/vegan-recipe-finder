@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { auth } from '../firebase'
+import { auth } from '../firebase';
+import './styles.css'
 
 const SignUpPage = ({ history }) =>
-  <div>
+  <div className='sign-up'>
     <h1>SignUp</h1>
     <SignUpForm history={history} />
   </div>
@@ -22,6 +23,7 @@ class SignUpForm extends Component {
   };
 
   onSubmit = (event) => {
+    event.preventDefault();
     const { username, email, passwordOne } = this.state;
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -35,11 +37,8 @@ class SignUpForm extends Component {
         }));
       this.props.history.push('/');
       })
-      .catch(error => {
-        this.setState({ 'error': error });
-      });
+      .catch(error => this.setState({ error: error.message }));
 
-    event.preventDefault();
   }
 
   handleChange = (event) => {
@@ -56,7 +55,8 @@ class SignUpForm extends Component {
       this.state.username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className='signup-form' onSubmit={this.onSubmit}>
+      Username: 
        <input
         name="username"
         value={this.state.username}
@@ -64,6 +64,7 @@ class SignUpForm extends Component {
         type="text"
         placeholder="Full Name"
       />
+      Email: 
       <input
         name="email"
         value={this.state.email}
@@ -71,6 +72,7 @@ class SignUpForm extends Component {
         type="text"
         placeholder="Email Address"
       />
+      Password: 
       <input
         name="passwordOne"
         value={this.state.passwordOne}
@@ -78,6 +80,7 @@ class SignUpForm extends Component {
         type="password"
         placeholder="Password"
       />
+      Confirm Password: 
       <input
         name="passwordTwo"
         value={this.state.passwordTwo}
@@ -88,6 +91,7 @@ class SignUpForm extends Component {
       <button disabled={isInvalid} type="submit">
         Sign Up
       </button>
+      <p>{this.state.error}</p>
       </form>
     );
   }
