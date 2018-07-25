@@ -2,6 +2,9 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 apiKey food to fork ebcaa6a7b9e3268c9091ccc10a3839d3 
 
+#firebase api key
+/src/firebase/auth.js
+
 # apiKey
 /src/helper/apiKey.js
 /src/apiKey.js
