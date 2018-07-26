@@ -1,8 +1,9 @@
 .recipes-container {
+  display: flex;
+  flex-wrap: wrap;
   background:rgba(255,255,255, 0.8);
   border-radius: 4px;
-  height: 70vh;
+  height: 85vh;
   overflow: auto;
-  width: 40vw;
-
+  margin: .5rem;
 }
