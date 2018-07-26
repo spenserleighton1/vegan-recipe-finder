@@ -10,12 +10,8 @@ import { apiKey } from '../helper/apiKey';
 import Header from '../Header';
 import Search from '../Search';
 import { firebase, auth } from '../firebase';
-import LandingPage from '../Landing';
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
-import PasswordForgetPage from '../PasswordForget';
-import HomePage from '../Home';
-import AccountPage from '../Account';
 import Loader from '../Loader'
 import './styles.css';
 
@@ -49,8 +45,6 @@ async componentDidMount() {
         <Header authUser={ this.state.authUser } />
         <Route exact path={'/signUp'} component={() => <SignUpPage />} />
         <Route exact path={'/signIn'} component={() => <SignInPage />} />
-        <Route exact path={'/home'} component={() => <HomePage />} />
-
         <Search />
         <SingleRecipeContainer />
         { loaded }

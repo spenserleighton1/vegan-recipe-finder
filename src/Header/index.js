@@ -1,5 +1,4 @@
 import React from 'react';
-import SignOutButton from '../SignOut';
 import { auth } from '../firebase';
 import './styles.css';
 import { Route, Link, withRouter } from 'react-router-dom';
