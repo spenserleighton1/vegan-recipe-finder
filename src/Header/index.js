@@ -16,7 +16,7 @@ const HeaderAuth = () => {
   return (
   <div className='header'>
     <h1>Vegan Recipe Finder</h1>
-      <button className='header-btn' type="button" onClick={ () => {auth.doSignOut()}}>Sign Out</button>
+      <button className='header-btn' type='button' onClick={ () => {auth.doSignOut()}}>Sign Out</button>
   </div>
     )
 }
@@ -25,7 +25,7 @@ const HeaderNonAuth = () => {
   return (
   <div className='header'>
     <h1>Vegan Recipe Finder</h1>
-    <Link className="header-link" to={'/signIn'}>Sign In</Link>
+    <button className='header-btn'><Link className='header-link' to={'/signIn'}>Sign In</Link></button>
   </div>
     )
 }
