@@ -48,7 +48,7 @@ async componentDidMount() {
         <Route exact path={'/signUp'} component={() => <SignUpPage />} />
         <Route exact path={'/signIn'} component={() => <SignInPage />} />
         <Search />
-        <Route exact path={'/savedRecipes'} component={() => <SavedRecipesContainer />} />
+        <Route exact path={'/savedRecipes'} component={() => <SavedRecipesContainer authUser={ this.state.authUser} />} />
         <SingleRecipeContainer authUser={ this.state.authUser } />
         { loaded }
       </div>
