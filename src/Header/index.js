@@ -1,7 +1,7 @@
 import React from 'react';
 import { auth } from '../firebase';
 import './styles.css';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = ({ authUser }) => {
   return (
@@ -15,6 +15,7 @@ const HeaderAuth = () => {
   return (
   <div className='header'>
     <h1>Vegan Recipe Finder</h1>
+      <button><Link className='header-link' to={'/savedRecipes'}>Saved Recipes</Link></button>
       <button className='header-btn' type='button' onClick={ () => {auth.doSignOut()}}>Sign Out</button>
   </div>
     )

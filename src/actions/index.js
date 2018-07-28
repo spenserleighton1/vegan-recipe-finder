@@ -22,3 +22,8 @@ export const deleteRecipe = (id) => ({
   type: 'DELETE_RECIPE',
   id
 })
+
+export const addSavedRecipes = (savedRecipe) => ({
+  type: 'ADD_SAVED_RECIPES',
+  savedRecipe
+})

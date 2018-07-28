@@ -21,14 +21,14 @@ export class RecipesContainer extends Component {
     this.props.recipes.map((recipe, index) => {
     return <RecipeCard {...recipe} 
                   key={ index }
-                  fetchRecipe={ this.fetchRecipe }  />
+                  fetchRecipe={ this.fetchRecipe }/>
     })
   ) 
 
 render() {
-  const a = this.props.loading ? <Loader /> :  this.recipesToDisplay()
+  const loaded = this.props.loading ? <Loader /> :  this.recipesToDisplay()
   return (
-    <div className='recipes-container'>{ a }</div>
+    <div className='recipes-container'>{ loaded }</div>
     )
   }
 }
