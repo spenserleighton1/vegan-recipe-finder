@@ -45,6 +45,12 @@ ShallowWrapper {
                     another carrot
           </li>
 </ul>,
+        <button
+          className="favorite-btn"
+          onClick={[Function]}
+>
+          fav
+</button>,
         <a
           href="www.com"
 >
@@ -123,6 +129,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "fav",
+          "className": "favorite-btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "fav",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Directions",
           "href": "www.com",
         },
@@ -154,6 +173,12 @@ ShallowWrapper {
                         another carrot
             </li>
 </ul>,
+          <button
+            className="favorite-btn"
+            onClick={[Function]}
+>
+            fav
+</button>,
           <a
             href="www.com"
 >
@@ -226,6 +251,19 @@ ShallowWrapper {
             },
           ],
           "type": "ul",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "fav",
+            "className": "favorite-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "fav",
+          "type": "button",
         },
         Object {
           "instance": null,

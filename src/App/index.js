@@ -32,6 +32,7 @@ async componentDidMount() {
     ? this.setState({ authUser })
     : this.setState({ authUser: null })
   });
+
   const results = await fetchRecipes(apiKey);
   const recipes = await cleanData(results.recipes);
   this.props.addRecipes(recipes);
@@ -46,7 +47,7 @@ async componentDidMount() {
         <Route exact path={'/signUp'} component={() => <SignUpPage />} />
         <Route exact path={'/signIn'} component={() => <SignInPage />} />
         <Search />
-        <SingleRecipeContainer />
+        <SingleRecipeContainer authUser={ this.state.authUser } />
         { loaded }
       </div>
     );
