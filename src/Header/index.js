@@ -15,8 +15,12 @@ const HeaderAuth = () => {
   return (
   <div className='header'>
     <h1>Vegan Recipe Finder</h1>
-      <button><Link className='header-link' to={'/savedRecipes'}>Saved Recipes</Link></button>
-      <button className='header-btn' type='button' onClick={ () => {auth.doSignOut()}}>Sign Out</button>
+      <button>
+        <Link className='header-link' to={'/savedRecipes'}>Saved Recipes</Link>
+      </button>
+      <button className='header-btn' type='button' onClick={ () => {auth.doSignOut() }}>
+        <Link to={'/'}>Sign Out</Link>
+      </button>
   </div>
     )
 }
