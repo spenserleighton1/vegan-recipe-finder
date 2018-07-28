@@ -24,7 +24,7 @@ class SignUpForm extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    const { username, email, passwordOne } = this.state;
+    const { email, passwordOne } = this.state;
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {

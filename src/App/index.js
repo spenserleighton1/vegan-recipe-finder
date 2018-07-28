@@ -1,4 +1,5 @@
 import SingleRecipeContainer from '../SingleRecipeContainer';
+import SavedRecipesContainer from '../SavedRecipesContainer';
 import { Route, withRouter } from 'react-router-dom';
 import React, { Component } from 'react';
 import RecipesContainer from '../RecipesContainer';
@@ -47,6 +48,7 @@ async componentDidMount() {
         <Route exact path={'/signUp'} component={() => <SignUpPage />} />
         <Route exact path={'/signIn'} component={() => <SignInPage />} />
         <Search />
+        <Route exact path={'/savedRecipes'} component={() => <SavedRecipesContainer />} />
         <SingleRecipeContainer authUser={ this.state.authUser } />
         { loaded }
       </div>
