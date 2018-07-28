@@ -11,7 +11,6 @@ export class RecipesContainer extends Component {
 
   fetchRecipe = async (key, id) => {
     this.props.isLoading(true)
-    console.log(this.props.loading)
     const results = await fetchSingleRecipe(key,id)
     const recipe = await cleanRecipe(results)
     this.props.addSingleRecipe(recipe)
