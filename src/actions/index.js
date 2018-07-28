@@ -17,3 +17,8 @@ export const saveRecipe = (id) => ({
   type: 'SAVE_RECIPE',
   id
 })
+
+export const deleteRecipe = (id) => ({
+  type: 'DELETE_RECIPE',
+  id
+})
