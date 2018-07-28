@@ -13,7 +13,7 @@ export const isLoading = (bool) => ({
   isLoading: bool
 })
 
-export const singleIsLoading = (bool) => ({
-  type: 'SINGLE_IS_LOADING',
-  singleIsLoading: bool
+export const saveRecipe = (id) => ({
+  type: 'SAVE_RECIPE',
+  id
 })
