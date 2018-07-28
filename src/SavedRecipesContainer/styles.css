@@ -1,4 +1,8 @@
 .saved-recipes-container {
-  border: 2px solid magenta;
-  height: 500px;
+  background:rgba(255,255,255, 0.8);
+  border-radius: 4px;
+  height: 60vh;
+  width: 40vw;
+  overflow: auto;
+  margin: .5rem;
 }

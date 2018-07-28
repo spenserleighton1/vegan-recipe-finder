@@ -22,10 +22,6 @@ export class SavedRecipesContainer extends Component {
     })
   }
 
-  // display = (something) => {
-  //   something
-  // }
-
   addFavorite = (id) => {
     const { uid } = this.props.authUser 
     // this.props.saveRecipe(id)
