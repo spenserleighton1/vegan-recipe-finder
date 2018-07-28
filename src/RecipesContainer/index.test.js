@@ -1,7 +1,7 @@
 import React from 'react';
 import { RecipesContainer, mapDispatchToProps, mapStateToProps } from './';
 import { shallow, mount } from 'enzyme';
-import { addSingleRecipe } from '../actions';
+import { addSingleRecipe, isLoading } from '../actions';
 import { fetchSingleRecipe } from '../helper/apiCalls';
 import { cleanRecipe} from '../helper/dataCleaner';
 
@@ -19,7 +19,8 @@ describe('RecipesContainer', () => {
   it('should invoke addSingleRecipe when fetch recipe is called', async () => {
     const mockRecipes = [{ title: 'recipe 1' }, { title: 'recipe 2' }]
     const mockAddSingleRecipe = jest.fn();
-    const wrapper = shallow(<RecipesContainer addSingleRecipe={ mockAddSingleRecipe } recipes={ mockRecipes }/>);
+    const mockIsLoading = jest.fn();
+    const wrapper = shallow(<RecipesContainer isLoading={ mockIsLoading } addSingleRecipe={ mockAddSingleRecipe } recipes={ mockRecipes }/>);
 
     const results = await wrapper.instance().fetchRecipe()
 
@@ -27,7 +28,7 @@ describe('RecipesContainer', () => {
   })
 
   describe('mapDispatchToProps', () => {
-    it('should return a props object', () => {
+    it('should return a props object with addSingleRecipe', () => {
       const mockAddSingleRecipe = jest.fn();
       const mockDispatch = jest.fn();
 
@@ -35,6 +36,17 @@ describe('RecipesContainer', () => {
       const actionToDispatch = addSingleRecipe({ title: 'a recipe' });
 
       mappedProps.addSingleRecipe({ title: 'a recipe' });
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    })
+
+    it('should return a props object with isLoading', () => {
+      const mockIsLoading = jest.fn();
+      const mockDispatch = jest.fn();
+
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      const actionToDispatch = isLoading({ loading: false });
+
+      mappedProps.isLoading({ loading: false });
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     })
   })
