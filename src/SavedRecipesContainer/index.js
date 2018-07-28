@@ -22,9 +22,12 @@ export class SavedRecipesContainer extends Component {
     })
   }
 
+  //saved recipes in redux store empties but not supersaved recipes
+  
+
   addFavorite = (id) => {
     const { uid } = this.props.authUser 
-    // this.props.saveRecipe(id)
+    this.props.saveRecipe(id)
     // docRef.set({
     //   userId: uid,
     //   recipes: this.props.savedRecipes
@@ -36,13 +39,17 @@ export class SavedRecipesContainer extends Component {
     const recipesToDisplay = this.props.superSavedRecipes.map(recipe => {
       return <RecipeDetailsCard {...recipe}
         addFavorite={ this.addFavorite }
-        authUser={ true } />
+        authUser={ this.props.authUser } />
     })
-    return (
-      <div className='saved-recipes-container'>
-        { recipesToDisplay }
-      </div>
+    if(this.props.superSavedRecipes.length) {
+      return (
+        <div className='saved-recipes-container'>
+          { recipesToDisplay }
+        </div>
       )
+    } else {
+      return <p></p>
+    }
   }
 }
 
