@@ -1,8 +1,10 @@
 .saved-recipes-container {
+  display: flex;
+  flex-wrap: wrap;
   background:rgba(255,255,255, 0.8);
   border-radius: 4px;
   height: 60vh;
-  width: 40vw;
+  width: 97vw;
   overflow: auto;
   margin: .5rem;
 }
