@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { shallow } from 'enzyme';
-import { SingleRecipeContainer, mapStateToProps } from './'
+import { saveRecipe, deleteRecipe } from '../actions'
+import { SingleRecipeContainer, mapStateToProps, mapDispatchToProps } from './'
 
 describe('SingleRecipeContainer', () => {
   it('should match the snapshot when it has a props object', () => {
@@ -33,12 +34,56 @@ describe('SingleRecipeContainer', () => {
       id: 666
     }
     const mockAddFavorite = jest.fn()
-    const wrapper = shallow(<SingleRecipeContainer recipe={ recipe } addFavorite={ mockAddFavorite } />)
+    const wrapper = shallow(<SingleRecipeContainer 
+      recipe={ recipe } 
+      addFavorite={ mockAddFavorite } />)
 
 
     wrapper.find('.favorite-btn').simulate('click')
 
     expect(mockAddFavorite).toHaveBeenCalled()
+  })
+
+  it('should call saveRecipes action when addFavorite is called', () => {
+    const recipe = { 
+      title: 'some title',
+      publisher: 'some publisher',
+      ingredients: ['carrot', 'another carrot'],
+      linkUrl: 'www.com',
+      id: 666
+    }
+    const mockAuthUser = { uid: 666 }
+    const mockAction = jest.fn()
+    const wrapper = shallow(<SingleRecipeContainer 
+      recipe={ recipe } 
+      saveRecipe={ mockAction } 
+      authUser={ mockAuthUser }/>)
+
+    wrapper.instance().addFavorite()
+
+    expect(mockAction).toHaveBeenCalled()
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should return a props object with saveRecipe', () => {
+      const mockDispatch = jest.fn();
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const actionToDispatch = saveRecipe({id: 666})
+
+      mappedProps.saveRecipe({id: 666})
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    })
+
+    it('should return a props object with deleteRecipe', () => {
+      const mockDispatch = jest.fn();
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      const actionToDispatch = deleteRecipe({id: 666})
+
+      mappedProps.deleteRecipe({id: 666})
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    })
   })
 
   describe('mapStateToProps', () => {
@@ -51,4 +96,5 @@ describe('SingleRecipeContainer', () => {
       expect(mappedProps).toEqual(expected);
     })
   })
+
 })

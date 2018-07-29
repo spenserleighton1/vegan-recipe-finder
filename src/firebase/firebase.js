@@ -13,8 +13,12 @@ const config = {
 
 firebase.initializeApp(config);
 
-export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+const settings = {/* your settings... */ timestampsInSnapshots: true};
+firestore.settings(settings);
+export const auth = firebase.auth();
 export const docRef = firestore.doc("users/savedRecipes");
 
 export default { auth, docRef };
+
+
