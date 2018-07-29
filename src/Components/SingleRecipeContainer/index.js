@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { docRef } from '../firebase'
+import { docRef } from '../../firebase'
 import RecipeDetailsCard from '../RecipeDetailsCard'
-import { saveRecipe, deleteRecipe } from '../actions'
+import { saveRecipe, deleteRecipe } from '../../actions'
 import './styles.css'
 
 export class SingleRecipeContainer extends Component {
 
   addFavorite = (id) => {
     const { uid } = this.props.authUser 
-    this.props.saveRecipe(id)
-    // docRef.set({
-    //   userId: uid,
-    //   recipes: this.props.savedRecipes
-    // }).then(() => console.log('saved'))
-    //   .catch(error => console.log(error.message))
+    this.props.saveRecipeID(id)
+
+    docRef.set({
+      userId: uid,
+      recipes: this.props.savedRecipeIDs
+    }).then(() => console.log('saved'))
+      .catch(error => console.log(error.message))
   }
   
   render() {    
@@ -34,11 +35,11 @@ export class SingleRecipeContainer extends Component {
 
 export const mapStateToProps = (state) => ({
   recipe: state.singleRecipe,
-  savedRecipes: state.savedRecipes
+  savedRecipeIDs: state.savedRecipeIDs
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  saveRecipe: (id) => dispatch(saveRecipe(id)),
+  saveRecipeID: (id) => dispatch(saveRecipe(id)),
   deleteRecipe: (id) => dispatch(deleteRecipe(id))
 })
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import RecipeCard from '../RecipeCard';
-import { fetchSingleRecipe } from '../helper/apiCalls'
-import { cleanRecipe } from '../helper/dataCleaner'
-import { addSingleRecipe, isLoading } from '../actions'
-import Loader from '../Loader'
+import RecipeCard from '../../Components/RecipeCard';
+import { fetchSingleRecipe } from '../../helper/apiCalls'
+import { cleanRecipe } from '../../helper/dataCleaner'
+import { addSingleRecipe, isLoading } from '../../actions'
+import Loader from '../../Components/Loader'
 import './styles.css';
 
 export class RecipesContainer extends Component {

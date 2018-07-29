@@ -1,5 +1,5 @@
 import React from 'react';
-import carrot from '../Images/carrotspinner.png'
+import carrot from '../../Images/carrotspinner.png'
 import './styles.css';
 
 const Loader = () => (

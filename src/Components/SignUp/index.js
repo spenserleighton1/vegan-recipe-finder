@@ -1,6 +1,6 @@
  import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { auth } from '../firebase';
+import { auth } from '../../firebase';
 import './styles.css'
 
 const SignUpPage = ({ history }) =>
@@ -97,16 +97,6 @@ class SignUpForm extends Component {
   }
 }
 
-const SignUpLink = () =>
-  <p>
-    Don't have an account?
-    {' '}
-    <Link to={'/signUp'}>Sign Up</Link>
-  </p>
-
 export default withRouter(SignUpPage);
 
-export {
-  SignUpForm,
-  SignUpLink,
-};
+export { SignUpForm };

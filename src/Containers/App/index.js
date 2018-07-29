@@ -1,19 +1,19 @@
-import SingleRecipeContainer from '../SingleRecipeContainer';
+import SingleRecipeContainer from '../../Components/SingleRecipeContainer';
 import SavedRecipesContainer from '../SavedRecipesContainer';
 import { Route, withRouter } from 'react-router-dom';
 import React, { Component } from 'react';
 import RecipesContainer from '../RecipesContainer';
-import { fetchRecipes } from '../helper/apiCalls';
-import { addRecipes, isLoading } from '../actions';
-import { cleanData } from '../helper/dataCleaner';
+import { fetchRecipes } from '../../helper/apiCalls';
+import { addRecipes, isLoading } from '../../actions';
+import { cleanData } from '../../helper/dataCleaner';
 import { connect } from 'react-redux';
-import { apiKey } from '../helper/apiKey';
-import Header from '../Header';
+import { apiKey } from '../../helper/apiKey';
+import Header from '../../Components/Header';
 import Search from '../Search';
-import { firebase, auth } from '../firebase';
-import SignUpPage from '../SignUp';
-import SignInPage from '../SignIn';
-import Loader from '../Loader'
+import { firebase, auth } from '../../firebase';
+import SignUpPage from '../../Components/SignUp';
+import SignInPage from '../../Components/SignIn';
+import Loader from '../../Components/Loader'
 import './styles.css';
 
 
