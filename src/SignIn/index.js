@@ -26,10 +26,7 @@ class SignInForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
 
-    const {
-      email,
-      password,
-    } = this.state;
+    const { email, password } = this.state;
 
     auth.doSignInWithEmailAndPassword(email, password)
       .then(() => {
