@@ -38,6 +38,16 @@ ShallowWrapper {
 >
           Sign In
 </button>,
+        <p>
+          Don't have an account?
+           
+          <Link
+                    replace={false}
+                    to="/signUp"
+          >
+                    Sign Up
+          </Link>
+</p>,
         <p />,
       ],
       "onSubmit": [Function],
@@ -92,6 +102,42 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": Array [
+            "Don't have an account?",
+            " ",
+            <Link
+              replace={false}
+              to="/signUp"
+>
+              Sign Up
+</Link>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Don't have an account?",
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Sign Up",
+              "replace": false,
+              "to": "/signUp",
+            },
+            "ref": null,
+            "rendered": "Sign Up",
+            "type": [Function],
+          },
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": null,
         },
         "ref": null,
@@ -128,6 +174,16 @@ ShallowWrapper {
 >
             Sign In
 </button>,
+          <p>
+            Don't have an account?
+             
+            <Link
+                        replace={false}
+                        to="/signUp"
+            >
+                        Sign Up
+            </Link>
+</p>,
           <p />,
         ],
         "onSubmit": [Function],
@@ -176,6 +232,42 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Sign In",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Don't have an account?",
+              " ",
+              <Link
+                replace={false}
+                to="/signUp"
+>
+                Sign Up
+</Link>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Don't have an account?",
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Sign Up",
+                "replace": false,
+                "to": "/signUp",
+              },
+              "ref": null,
+              "rendered": "Sign Up",
+              "type": [Function],
+            },
+          ],
+          "type": "p",
         },
         Object {
           "instance": null,

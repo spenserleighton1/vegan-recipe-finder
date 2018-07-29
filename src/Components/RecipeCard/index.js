@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css'
-import { apiKey } from '../helper/apiKey';
+import { apiKey } from '../../helper/apiKey';
 
 const RecipeCard = ({ recipeTitle, recipeLink, recipeImage, fetchRecipe, recipeId }) => {
   return (

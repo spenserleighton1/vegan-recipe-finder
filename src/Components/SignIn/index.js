@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import { SignUpLink } from '../SignUp';
-import { auth } from '../firebase';
+import { withRouter, Link } from 'react-router-dom';
+// import { SignUpLink } from '../SignUp';
+import { auth } from '../../firebase';
 import './styles.css'
 
 
@@ -9,7 +9,6 @@ const SignInPage = ({ history }) =>
   <div className='sign-in'>
     <h2>SignIn</h2>
     <SignInForm history={history} />
-    <SignUpLink />
   </div>
 
 class SignInForm extends Component {
@@ -72,6 +71,11 @@ class SignInForm extends Component {
         <button disabled={ isInvalid } type="submit">
           Sign In
         </button>
+          <p>
+            Don't have an account?
+            {' '}
+            <Link to={'/signUp'}>Sign Up</Link>
+          </p>
         <p>{ this.state.error }</p>
       </form>
     );

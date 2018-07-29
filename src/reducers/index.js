@@ -9,8 +9,8 @@ const rootReducer = combineReducers({
   recipes: recipeReducer,
   singleRecipe: singleRecipeReducer,
   loading: isLoadingReducer,
-  savedRecipes: saveRecipeReducer,
-  superSavedRecipes: savedRecipesReducer
+  savedRecipeIDs: saveRecipeReducer,
+  savedRecipesFull: savedRecipesReducer
 });
 
 export default rootReducer;
