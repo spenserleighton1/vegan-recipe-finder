@@ -1,8 +1,9 @@
 import React from 'react';
+import './styles.css'
 
 const RecipeDetailsCard = ({ title, publisher, ingredients, linkUrl, id, addFavorite, authUser }) => {
   return (
-    <div>
+    <div className='recipe-card'>
       <h2>{ title }</h2>
       <p>{ publisher }</p>
       <ul>
