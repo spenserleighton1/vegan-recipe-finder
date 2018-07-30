@@ -5,7 +5,7 @@
   float: right;
   width: 40vw;
   overflow: auto;
-  margin: .5rem;
+  margin-left: .5rem;
 }
 
 a {

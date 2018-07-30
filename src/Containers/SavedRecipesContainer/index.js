@@ -6,25 +6,31 @@ import { apiKey } from '../../helper/apiKey';
 import RecipeDetailsCard from '../../Components/RecipeDetailsCard';
 import { docRef } from '../../firebase'
 import { saveRecipe, deleteRecipe, addSavedRecipes } from '../../actions'
+import Loader from '../../Components/Loader'
 import './styles.css';
 
 export class SavedRecipesContainer extends Component {
+  constructor() {
+    super()
+    this.state = { loading: false }
+  }
 
   componentDidMount() {
     this.fetchRecipes(apiKey)
   }
 
   fetchRecipes = (key) => {
+    this.setState({ loading: true })
     this.props.savedRecipeIDs.map(async rId => {
       const results = await fetchSingleRecipe(key, rId)
       const recipe = await cleanRecipe(results)
       this.props.addSavedRecipes(recipe)
+      this.setState({ loading: false })
     })
   }
 
   //saved recipes in redux store empties but not supersaved recipes
   
-
   addFavorite = (id) => {
     const { uid } = this.props.authUser 
     this.props.saveRecipe(id)

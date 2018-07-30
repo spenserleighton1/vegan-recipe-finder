@@ -14,5 +14,6 @@ export const cleanRecipe = data => ({
   publisher: data.recipe.publisher,
   ingredients: data.recipe.ingredients,
   linkUrl: data.recipe.source_url,
-  id: data.recipe.recipe_id 
+  id: data.recipe.recipe_id,
+  image: data.recipe.image_url 
 })

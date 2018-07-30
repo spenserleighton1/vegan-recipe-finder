@@ -22,7 +22,7 @@ export class App extends Component {
     super(props);
 
     this.state = {
-      authUser: null,
+      authUser: null
     };
   }
 
@@ -45,12 +45,12 @@ async componentDidMount() {
     return (
       <div className="App">
         <Header authUser={ this.state.authUser } />
-        <Route exact path={'/signUp'} component={() => <SignUpPage />} />
-        <Route exact path={'/signIn'} component={() => <SignInPage />} />
-        <Search />
-        <Route exact path={'/savedRecipes'} component={() => <SavedRecipesContainer authUser={ this.state.authUser} />} />
-        <SingleRecipeContainer authUser={ this.state.authUser } />
-        { loaded }
+        <Route exact path={'/signUp'} component={SignUpPage} />
+        <Route exact path={'/signIn'} component={SignInPage} />
+        <Route exact path={'/savedRecipes'} render={() => <SavedRecipesContainer authUser={ this.state.authUser } />} />
+        <Route exact path={'/'} render={()=> <SingleRecipeContainer authUser={ this.state.authUser } /> } />
+        <Route exact path={'/'} render={()=> loaded } />
+
       </div>
     );
   }
