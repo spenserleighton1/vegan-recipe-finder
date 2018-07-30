@@ -2,8 +2,8 @@
   background-color: rgba(88, 121, 36, 0.8);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
+  justify-content: flex-end;
   height: 4rem;
   margin: 0px;
   position: absolute;
@@ -28,15 +28,14 @@ h1 {
 }
 
 .header-btn {
-  position: absolute;
-  right: 1.5rem;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Cinzel', serif;
   background-color: transparent;
   color: white;
   border: none;
-  font-size: 
 }
 
-
+.header-btn:hover {
+  color: #F0ECF0;
+}
 
