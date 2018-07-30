@@ -9,15 +9,15 @@ class SavedRecipeCard extends Component {
   }
 
   handleClick() {
-    this.setState({ displayDetails: true })
-    console.log('working')
+    this.setState({ displayDetails: !this.state.displayDetails })
   }
 
   render() {
-    const { title, image, fetchRecipe, id, ingredients } = this.props
+    const { title, image, fetchRecipe, id, ingredients, linkUrl } = this.props
     const details = this.state.displayDetails ? 
       <ul>
         { ingredients.map((ingredient, index) => <li key={ index }>{ ingredient }</li>)}
+        <li><a href={ linkUrl }>Directions</a></li>
       </ul> : ''
     return (
       <div className='recipe-card'>

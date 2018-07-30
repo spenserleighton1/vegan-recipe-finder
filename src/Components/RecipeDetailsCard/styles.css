@@ -1,3 +1,23 @@
 .recipe-card {
   width: 30vw;
 }
+
+.save-recipe-btn {
+  color: #3F493F;
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+  background-color: transparent;
+  border: none;
+}
+
+.save-recipe-btn:hover {
+  color: darkgreen;
+}
+
+.directions-link {
+  color: #3F493F;
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+  text-decoration: none;
+
+}

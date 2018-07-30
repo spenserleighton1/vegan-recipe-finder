@@ -29,7 +29,6 @@ export class SavedRecipesContainer extends Component {
       this.setState({ loading: false })
     })
   }
-
   //saved recipes in redux store empties but not supersaved recipes
   
   addFavorite = (id) => {
