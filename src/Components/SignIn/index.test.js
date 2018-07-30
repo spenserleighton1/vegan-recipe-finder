@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SignInForm } from './';
-import { auth } from '../firebase'
+import { auth } from '../../firebase'
 
-jest.mock('../firebase');
+jest.mock('../../firebase');
 
 describe('SignInForm', () => {
   let wrapper;
