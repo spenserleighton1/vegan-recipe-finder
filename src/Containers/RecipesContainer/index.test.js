@@ -1,12 +1,12 @@
 import React from 'react';
 import { RecipesContainer, mapDispatchToProps, mapStateToProps } from './';
 import { shallow, mount } from 'enzyme';
-import { addSingleRecipe, isLoading } from '../actions';
-import { fetchSingleRecipe } from '../helper/apiCalls';
-import { cleanRecipe} from '../helper/dataCleaner';
+import { addSingleRecipe, isLoading } from '../../actions';
+import { fetchSingleRecipe } from '../../helper/apiCalls';
+import { cleanRecipe} from '../../helper/dataCleaner';
 
-jest.mock('../helper/apiCalls');
-jest.mock('../helper/dataCleaner');
+jest.mock('../../helper/apiCalls');
+jest.mock('../../helper/dataCleaner');
 
 describe('RecipesContainer', () => {
   it('should match the snapshot', () => {

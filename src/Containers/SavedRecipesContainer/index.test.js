@@ -1,13 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-
 import { SavedRecipesContainer, mapStateToProps, mapDispatchToProps } from './';
-import { fetchSingleRecipe } from '../helper/apiCalls';
-import { cleanRecipe} from '../helper/dataCleaner';
-import { addSavedRecipes, saveRecipe, deleteRecipe } from '../actions';
+import { fetchSingleRecipe } from '../../helper/apiCalls';
+import { cleanRecipe} from '../../helper/dataCleaner';
+import { addSavedRecipes, saveRecipe, deleteRecipe } from '../../actions';
 
-jest.mock('../helper/apiCalls');
-jest.mock('../helper/dataCleaner');
+jest.mock('../../helper/apiCalls');
+jest.mock('../../helper/dataCleaner');
 
 describe('SavedRecipesContainer', () => {
   let wrapper;
@@ -27,8 +26,8 @@ describe('SavedRecipesContainer', () => {
       authUser={ mockAuthUser }
       saveRecipe={ mockSaveRecipe }
       addSavedRecipes={ mockAddSaved }
-      superSavedRecipes={ mockRecipes } 
-      savedRecipes={ mockSaved }/>)
+      savedRecipesFull={ mockRecipes } 
+      savedRecipeIDs={ mockSaved }/>)
   })
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
@@ -39,8 +38,8 @@ describe('SavedRecipesContainer', () => {
       authUser={ mockAuthUser }
       saveRecipe={ mockSaveRecipe }
       addSavedRecipes={ mockAddSaved }
-      superSavedRecipes={ [] } 
-      savedRecipes={ mockSaved }/>)
+      savedRecipesFull={ [] } 
+      savedRecipeIDs={ mockSaved }/>)
 
     expect(wrapper).toMatchSnapshot()
   })
@@ -92,8 +91,8 @@ describe('SavedRecipesContainer', () => {
 
   describe('mapStateToProps', () => {
     it('should return a props object', () => {
-      const mockState = {savedRecipes: [], superSavedRecipes: []};
-      const expected = {"savedRecipes": [], "superSavedRecipes": []}
+      const mockState = {"savedRecipeIDs": [], "savedRecipesFull": []};
+      const expected = {"savedRecipeIDs": [], "savedRecipesFull": []}
 
       const mappedProps = mapStateToProps(mockState)
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Search, mapDispatchToProps } from './';
-import { addRecipes } from '../actions';
-import { fetchRecipes } from '../helper/apiCalls';
-import { cleanData } from '../helper/dataCleaner';
+import { addRecipes } from '../../actions';
+import { fetchRecipes } from '../../helper/apiCalls';
+import { cleanData } from '../../helper/dataCleaner';
 
-jest.mock('../helper/apiCalls');
-jest.mock('../helper/dataCleaner');
+jest.mock('../../helper/apiCalls');
+jest.mock('../../helper/dataCleaner');
 
 describe('Search', () => {
   let wrapper;

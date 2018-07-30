@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { App, mapDispatchToProps } from './';
-import { addRecipes, isLoading } from '../actions';
-import { fetchRecipes } from '../helper/apiCalls';
-import { cleanData } from '../helper/dataCleaner';
+import { addRecipes, isLoading } from '../../actions';
+import { fetchRecipes } from '../../helper/apiCalls';
+import { cleanData } from '../../helper/dataCleaner';
 
-jest.mock('../helper/apiCalls');
-jest.mock('../helper/dataCleaner');
+jest.mock('../../helper/apiCalls');
+jest.mock('../../helper/dataCleaner');
 
-describe.skip('App', () => {
+describe('App', () => {
   it('should match the snapshot', () => {
     const mockAddRecipes = jest.fn();
     const mockIsLoading = jest.fn();
@@ -17,7 +17,7 @@ describe.skip('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should call addRecipes on componentDidMount', async () => {
+  it.skip('should call addRecipes on componentDidMount', async () => {
     const mockAddRecipes = jest.fn();
     const wrapper = shallow(<App addRecipes={ mockAddRecipes }/>);
      
