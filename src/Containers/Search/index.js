@@ -32,7 +32,7 @@ export class Search extends Component {
       <form
         onSubmit={ this.handleSubmit } >
         <input
-          placeHolder="search by ingredient"
+          placeholder="   search by ingredient"
           className='search-input'
           type='text' 
           onChange={ this.handleChange } />

@@ -1,7 +1,8 @@
 body {
+  background-size: 100vw;
   font-family: 'Cinzel', serif;
   background-image: url('../src/Images/cattle.jpg');
-  background-position: center;
+  background-position: cover;
   color: #3D4A3E;
   font-family: sans-serif;
 }

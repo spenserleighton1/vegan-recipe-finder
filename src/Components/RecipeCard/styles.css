@@ -2,9 +2,7 @@
   margin: auto;
   font-family: 'Cinzel', serif;
   width: 20vw;
-  border-bottom: 1px solid gray;
   padding: 10px;
-  /*height: 300px*/
 }
 
 .recipe-img {
@@ -13,16 +11,13 @@
 }
 
 .recipe-btn {
-  display: block;
+  color: #3F493F;
   font-size: 18px;
+  font-family: 'Cinzel', serif;
   background-color: transparent;
-  color: green;
-  border: 2px solid green;
-  border-radius: 4px;
-  margin: auto;
+  border: none;
 }
 
 .recipe-btn:hover {
-  border: 2px solid darkgreen;
   color: darkgreen;
 }

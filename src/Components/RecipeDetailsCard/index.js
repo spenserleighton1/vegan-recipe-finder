@@ -10,11 +10,11 @@ const RecipeDetailsCard = ({ title, publisher, ingredients, linkUrl, id, addFavo
         { ingredients.map((ingredient, index) => <li key={ index }>{ ingredient }</li>)}
       </ul>
       <button  
-        className='favorite-btn' 
+        className='save-recipe-btn' 
         disabled={ !authUser } 
-        onClick={ () => { addFavorite(id) } }>fav
+        onClick={ () => { addFavorite(id) } }>Save Recipe
       </button>
-      <a href={ linkUrl }>Directions</a>
+      <a className='directions-link' href={ linkUrl }>Directions</a>
     </div>
     )
 }

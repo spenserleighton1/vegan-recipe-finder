@@ -54,6 +54,7 @@ ShallowWrapper {
           Directions
 </a>,
       ],
+      "className": "recipe-card",
     },
     "ref": null,
     "rendered": Array [
@@ -166,6 +167,7 @@ ShallowWrapper {
             Directions
 </a>,
         ],
+        "className": "recipe-card",
       },
       "ref": null,
       "rendered": Array [

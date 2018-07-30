@@ -1,18 +1,18 @@
+import { addRecipes, isLoading } from '../../actions';
 import SingleRecipeContainer from '../../Components/SingleRecipeContainer';
 import SavedRecipesContainer from '../SavedRecipesContainer';
 import { Route, withRouter } from 'react-router-dom';
 import React, { Component } from 'react';
+import { firebase, auth } from '../../firebase';
 import RecipesContainer from '../RecipesContainer';
 import { fetchRecipes } from '../../helper/apiCalls';
-import { addRecipes, isLoading } from '../../actions';
 import { cleanData } from '../../helper/dataCleaner';
 import { connect } from 'react-redux';
 import { apiKey } from '../../helper/apiKey';
-import Header from '../../Components/Header';
-import Search from '../Search';
-import { firebase, auth } from '../../firebase';
 import SignUpPage from '../../Components/SignUp';
 import SignInPage from '../../Components/SignIn';
+import Header from '../../Components/Header';
+import Search from '../Search';
 import Loader from '../../Components/Loader'
 import './styles.css';
 
@@ -20,10 +20,8 @@ import './styles.css';
 export class App extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      authUser: null
-    };
+    
+    this.state = { authUser: null };
   }
 
 async componentDidMount() {
@@ -50,7 +48,6 @@ async componentDidMount() {
         <Route exact path={'/savedRecipes'} render={() => <SavedRecipesContainer authUser={ this.state.authUser } />} />
         <Route exact path={'/'} render={()=> <SingleRecipeContainer authUser={ this.state.authUser } /> } />
         <Route exact path={'/'} render={()=> loaded } />
-
       </div>
     );
   }

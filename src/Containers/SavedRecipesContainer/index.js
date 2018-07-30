@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchSingleRecipe } from '../../helper/apiCalls';
 import { cleanRecipe } from '../../helper/dataCleaner';
 import { apiKey } from '../../helper/apiKey';
-import RecipeDetailsCard from '../../Components/RecipeDetailsCard';
+import SavedRecipeDetailsCard from '../../Components/SavedRecipeDetailsCard';
 import { docRef } from '../../firebase';
 import { saveRecipe, deleteRecipe, addSavedRecipes } from '../../actions';
 import { Link } from 'react-router-dom'
@@ -29,7 +29,6 @@ export class SavedRecipesContainer extends Component {
       this.setState({ loading: false })
     })
   }
-
   //saved recipes in redux store empties but not supersaved recipes
   
   addFavorite = (id) => {
@@ -39,8 +38,8 @@ export class SavedRecipesContainer extends Component {
 
   render() {
     const recipesToDisplay = this.props.savedRecipesFull.map(recipe => {
-      return <RecipeDetailsCard {...recipe}
-        addFavorite={ this.addFavorite }
+      console.log(recipe)
+      return <SavedRecipeDetailsCard {...recipe}
         authUser={ this.props.authUser } />
     })
     if(this.props.savedRecipesFull.length) {

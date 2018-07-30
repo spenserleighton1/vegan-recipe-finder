@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SignUpForm } from './';
-import { auth } from '../firebase'
+import { auth } from '../../firebase'
 
 describe('SignUpForm', () => {
   let wrapper;

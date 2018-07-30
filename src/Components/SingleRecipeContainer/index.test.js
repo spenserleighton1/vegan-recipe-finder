@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { shallow } from 'enzyme';
-import { saveRecipe, deleteRecipe } from '../actions'
+import { saveRecipe, deleteRecipe } from '../../actions'
 import { SingleRecipeContainer, mapStateToProps, mapDispatchToProps } from './'
 
 describe('SingleRecipeContainer', () => {
@@ -44,7 +44,7 @@ describe('SingleRecipeContainer', () => {
     expect(mockAddFavorite).toHaveBeenCalled()
   })
 
-  it('should call saveRecipes action when addFavorite is called', () => {
+  it('should call saveRecipeID action when addFavorite is called', () => {
     const recipe = { 
       title: 'some title',
       publisher: 'some publisher',
@@ -56,7 +56,7 @@ describe('SingleRecipeContainer', () => {
     const mockAction = jest.fn()
     const wrapper = shallow(<SingleRecipeContainer 
       recipe={ recipe } 
-      saveRecipe={ mockAction } 
+      saveRecipeID={ mockAction } 
       authUser={ mockAuthUser }/>)
 
     wrapper.instance().addFavorite()
@@ -65,13 +65,13 @@ describe('SingleRecipeContainer', () => {
   })
 
   describe('mapDispatchToProps', () => {
-    it('should return a props object with saveRecipe', () => {
+    it('should return a props object with saveRecipeID', () => {
       const mockDispatch = jest.fn();
 
       const mappedProps = mapDispatchToProps(mockDispatch);
       const actionToDispatch = saveRecipe({id: 666})
 
-      mappedProps.saveRecipe({id: 666})
+      mappedProps.saveRecipeID({id: 666})
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     })
 
