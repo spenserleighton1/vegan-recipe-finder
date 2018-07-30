@@ -7,3 +7,15 @@
   overflow: auto;
   margin-top: 75px;
 }
+
+.home-btn {
+  margin: .5rem 0 0 .5rem;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-image: url('../../Images/delete-button.svg');
+}
+
+.home-btn:hover {
+  background-image: url('../../Images/delete-button1.svg');
+}

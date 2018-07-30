@@ -4,9 +4,10 @@ import { fetchSingleRecipe } from '../../helper/apiCalls';
 import { cleanRecipe } from '../../helper/dataCleaner';
 import { apiKey } from '../../helper/apiKey';
 import RecipeDetailsCard from '../../Components/RecipeDetailsCard';
-import { docRef } from '../../firebase'
-import { saveRecipe, deleteRecipe, addSavedRecipes } from '../../actions'
-import Loader from '../../Components/Loader'
+import { docRef } from '../../firebase';
+import { saveRecipe, deleteRecipe, addSavedRecipes } from '../../actions';
+import { Link } from 'react-router-dom'
+import Loader from '../../Components/Loader';
 import './styles.css';
 
 export class SavedRecipesContainer extends Component {
@@ -45,6 +46,7 @@ export class SavedRecipesContainer extends Component {
     if(this.props.savedRecipesFull.length) {
       return (
         <div className='saved-recipes-container'>
+          <Link className='home-btn' exact to="/">Home</Link>
           { recipesToDisplay }
         </div>
       )

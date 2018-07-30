@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { docRef } from '../../firebase'
-import RecipeDetailsCard from '../RecipeDetailsCard'
-import { saveRecipe, deleteRecipe } from '../../actions'
-import './styles.css'
+import { docRef } from '../../firebase';
+import RecipeDetailsCard from '../RecipeDetailsCard';
+import { saveRecipe, deleteRecipe } from '../../actions';
+import './styles.css';
 
 export class SingleRecipeContainer extends Component {
 
