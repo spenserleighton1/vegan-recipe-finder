@@ -1,10 +1,10 @@
 import React from 'react';
-import carrot from '../../Images/carrotspinner.png'
+import leaf from '../../Images/leaf.svg'
 import './styles.css';
 
 const Loader = () => (
 <div className='loader'>
-  <img src={carrot} className="image" alt="laoding" />
+  <img src={ leaf } className="image" alt="laoding" />
 </div>
 )
 
