@@ -3,8 +3,7 @@
   flex-wrap: wrap;
   background:rgba(255,255,255, 0.8);
   border-radius: 4px;
-  height: 60vh;
-  width: 97vw;
+  height: 85vh;
   overflow: auto;
-  margin: .5rem;
+  margin-top: 75px;
 }
