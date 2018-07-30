@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": <img
         alt="laoding"
         className="image"
-        src="carrotspinner.png"
+        src="leaf.svg"
 />,
       "className": "loader",
     },
@@ -32,7 +32,7 @@ ShallowWrapper {
       "props": Object {
         "alt": "laoding",
         "className": "image",
-        "src": "carrotspinner.png",
+        "src": "leaf.svg",
       },
       "ref": null,
       "rendered": null,
@@ -49,7 +49,7 @@ ShallowWrapper {
         "children": <img
           alt="laoding"
           className="image"
-          src="carrotspinner.png"
+          src="leaf.svg"
 />,
         "className": "loader",
       },
@@ -61,7 +61,7 @@ ShallowWrapper {
         "props": Object {
           "alt": "laoding",
           "className": "image",
-          "src": "carrotspinner.png",
+          "src": "leaf.svg",
         },
         "ref": null,
         "rendered": null,
