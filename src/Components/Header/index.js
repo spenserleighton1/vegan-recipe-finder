@@ -16,7 +16,7 @@ const Header = ({ authUser }) => {
 const HeaderAuth = () => {
   return (
     <div className='header'>
-      <h1>Vegan Recipe Finder</h1>
+      <h1>Mostly Vegan Recipe Finder</h1>
       <Search />
       <button className='header-btn'>
         <Link className='header-link' exact to={'/savedRecipes'}>Saved Recipes</Link>

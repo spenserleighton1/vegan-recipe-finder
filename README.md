@@ -9,7 +9,6 @@ npm install
 npm start
 ```
 
-
 ## Screenshots
 Home Page
 ![HomePage](./src/Images/home-page.png "recipe finder home")
