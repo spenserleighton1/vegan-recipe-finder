@@ -4,7 +4,7 @@ import { auth } from '../../firebase';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-class SignInPage extends Component {
+export class SignInPage extends Component {
   constructor(props) {
     super(props);
 
@@ -80,6 +80,6 @@ class SignInPage extends Component {
 export default withRouter(SignInPage);
 
 SignInPage.propTypes = {
-  history: PropTypes.object.isRequired
+  history: PropTypes.object
 };
 

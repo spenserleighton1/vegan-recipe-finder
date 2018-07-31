@@ -21,7 +21,7 @@ describe('RecipeDetailsCard', () => {
 
     expect(wrapper).toMatchSnapshot()
   })
-  it('should call addFavorite when the button is clicked', () => {
+  it.skip('should call addFavorite when the button is clicked', () => {
      const recipe = {
       title: 'neat test',
       publisher: 'neat publisher',

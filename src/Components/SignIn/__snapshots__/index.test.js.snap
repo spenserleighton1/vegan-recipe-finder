@@ -4,7 +4,7 @@ exports[`SignInForm should match the snapShot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignInForm />,
+  Symbol(enzyme.__unrendered__): <SignInPage />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,39 +18,45 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <input
-          name="email"
-          onChange={[Function]}
-          placeholder="Email Address"
-          type="text"
-          value=""
-/>,
-        <input
-          name="password"
-          onChange={[Function]}
-          placeholder="Password"
-          type="password"
-          value=""
-/>,
-        <button
-          disabled={true}
-          type="submit"
+        <h2>
+          SignIn
+</h2>,
+        <form
+          onSubmit={[Function]}
 >
-          Sign In
-</button>,
-        <p>
-          Don't have an account?
-           
-          <Link
-                    replace={false}
-                    to="/signUp"
+          <input
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="Email Address"
+                    type="text"
+                    value=""
+          />
+          <input
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Password"
+                    type="password"
+                    value=""
+          />
+          <button
+                    disabled={true}
+                    type="submit"
           >
-                    Sign Up
-          </Link>
-</p>,
-        <p />,
+                    Sign In
+          </button>
+          <p>
+                    Don't have an account?
+                    <Link
+                              replace={false}
+                              to="/signUp"
+                    >
+                               Sign Up
+                    </Link>
+          </p>
+          <p />
+</form>,
       ],
-      "onSubmit": [Function],
+      "className": "sign-in",
     },
     "ref": null,
     "rendered": Array [
@@ -59,43 +65,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "name": "email",
-          "onChange": [Function],
-          "placeholder": "Email Address",
-          "type": "text",
-          "value": "",
+          "children": "SignIn",
         },
         "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "name": "password",
-          "onChange": [Function],
-          "placeholder": "Password",
-          "type": "password",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Sign In",
-          "disabled": true,
-          "type": "submit",
-        },
-        "ref": null,
-        "rendered": "Sign In",
-        "type": "button",
+        "rendered": "SignIn",
+        "type": "h2",
       },
       Object {
         "instance": null,
@@ -103,49 +77,134 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Don't have an account?",
-            " ",
-            <Link
-              replace={false}
-              to="/signUp"
+            <input
+              name="email"
+              onChange={[Function]}
+              placeholder="Email Address"
+              type="text"
+              value=""
+/>,
+            <input
+              name="password"
+              onChange={[Function]}
+              placeholder="Password"
+              type="password"
+              value=""
+/>,
+            <button
+              disabled={true}
+              type="submit"
 >
-              Sign Up
-</Link>,
+              Sign In
+</button>,
+            <p>
+              Don't have an account?
+              <Link
+                            replace={false}
+                            to="/signUp"
+              >
+                             Sign Up
+              </Link>
+</p>,
+            <p />,
           ],
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
-          "Don't have an account?",
-          " ",
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "children": "Sign Up",
-              "replace": false,
-              "to": "/signUp",
+              "name": "email",
+              "onChange": [Function],
+              "placeholder": "Email Address",
+              "type": "text",
+              "value": "",
             },
             "ref": null,
-            "rendered": "Sign Up",
-            "type": [Function],
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "password",
+              "onChange": [Function],
+              "placeholder": "Password",
+              "type": "password",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign In",
+              "disabled": true,
+              "type": "submit",
+            },
+            "ref": null,
+            "rendered": "Sign In",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Don't have an account?",
+                <Link
+                  replace={false}
+                  to="/signUp"
+>
+                   Sign Up
+</Link>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Don't have an account?",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": " Sign Up",
+                  "replace": false,
+                  "to": "/signUp",
+                },
+                "ref": null,
+                "rendered": " Sign Up",
+                "type": [Function],
+              },
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": null,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
           },
         ],
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
+        "type": "form",
       },
     ],
-    "type": "form",
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -154,39 +213,45 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <input
-            name="email"
-            onChange={[Function]}
-            placeholder="Email Address"
-            type="text"
-            value=""
-/>,
-          <input
-            name="password"
-            onChange={[Function]}
-            placeholder="Password"
-            type="password"
-            value=""
-/>,
-          <button
-            disabled={true}
-            type="submit"
+          <h2>
+            SignIn
+</h2>,
+          <form
+            onSubmit={[Function]}
 >
-            Sign In
-</button>,
-          <p>
-            Don't have an account?
-             
-            <Link
-                        replace={false}
-                        to="/signUp"
+            <input
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="Email Address"
+                        type="text"
+                        value=""
+            />
+            <input
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+            />
+            <button
+                        disabled={true}
+                        type="submit"
             >
-                        Sign Up
-            </Link>
-</p>,
-          <p />,
+                        Sign In
+            </button>
+            <p>
+                        Don't have an account?
+                        <Link
+                                    replace={false}
+                                    to="/signUp"
+                        >
+                                     Sign Up
+                        </Link>
+            </p>
+            <p />
+</form>,
         ],
-        "onSubmit": [Function],
+        "className": "sign-in",
       },
       "ref": null,
       "rendered": Array [
@@ -195,43 +260,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "name": "email",
-            "onChange": [Function],
-            "placeholder": "Email Address",
-            "type": "text",
-            "value": "",
+            "children": "SignIn",
           },
           "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "name": "password",
-            "onChange": [Function],
-            "placeholder": "Password",
-            "type": "password",
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Sign In",
-            "disabled": true,
-            "type": "submit",
-          },
-          "ref": null,
-          "rendered": "Sign In",
-          "type": "button",
+          "rendered": "SignIn",
+          "type": "h2",
         },
         Object {
           "instance": null,
@@ -239,49 +272,134 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Don't have an account?",
-              " ",
-              <Link
-                replace={false}
-                to="/signUp"
+              <input
+                name="email"
+                onChange={[Function]}
+                placeholder="Email Address"
+                type="text"
+                value=""
+/>,
+              <input
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                type="password"
+                value=""
+/>,
+              <button
+                disabled={true}
+                type="submit"
 >
-                Sign Up
-</Link>,
+                Sign In
+</button>,
+              <p>
+                Don't have an account?
+                <Link
+                                replace={false}
+                                to="/signUp"
+                >
+                                 Sign Up
+                </Link>
+</p>,
+              <p />,
             ],
+            "onSubmit": [Function],
           },
           "ref": null,
           "rendered": Array [
-            "Don't have an account?",
-            " ",
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "children": "Sign Up",
-                "replace": false,
-                "to": "/signUp",
+                "name": "email",
+                "onChange": [Function],
+                "placeholder": "Email Address",
+                "type": "text",
+                "value": "",
               },
               "ref": null,
-              "rendered": "Sign Up",
-              "type": [Function],
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "password",
+                "onChange": [Function],
+                "placeholder": "Password",
+                "type": "password",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign In",
+                "disabled": true,
+                "type": "submit",
+              },
+              "ref": null,
+              "rendered": "Sign In",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Don't have an account?",
+                  <Link
+                    replace={false}
+                    to="/signUp"
+>
+                     Sign Up
+</Link>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Don't have an account?",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": " Sign Up",
+                    "replace": false,
+                    "to": "/signUp",
+                  },
+                  "ref": null,
+                  "rendered": " Sign Up",
+                  "type": [Function],
+                },
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
             },
           ],
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
+          "type": "form",
         },
       ],
-      "type": "form",
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

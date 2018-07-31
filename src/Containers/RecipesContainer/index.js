@@ -47,8 +47,8 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer);
 
 RecipesContainer.propTypes = {
-  isLoading: PropTypes.func.isRequired,
-  addSingleRecipe: PropTypes.func.isRequired,
-  recipes: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired
+  isLoading: PropTypes.func,
+  addSingleRecipe: PropTypes.func,
+  recipes: PropTypes.array,
+  loading: PropTypes.bool
 };

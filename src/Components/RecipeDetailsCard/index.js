@@ -1,5 +1,6 @@
 import React from 'react';
-import './styles.css'
+import './styles.css';
+import PropTypes from 'prop-types';
 
 const RecipeDetailsCard = ({ title, publisher, ingredients, linkUrl, id, addFavorite, authUser }) => {
   return (
@@ -11,12 +12,22 @@ const RecipeDetailsCard = ({ title, publisher, ingredients, linkUrl, id, addFavo
       </ul>
       <button  
         className='save-recipe-btn' 
-        disabled={ !authUser } 
-        onClick={ () => { addFavorite(id) } }>Save Recipe
+        disabled={ !authUser }
+        onClick={ () => { addFavorite(id); } }>Save Recipe
       </button>
       <a className='directions-link' href={ linkUrl }>Directions</a>
     </div>
-    )
-}
+  );
+};
 
 export default RecipeDetailsCard;
+
+RecipeDetailsCard.propTypes = {
+  title: PropTypes.string,
+  publisher: PropTypes.string,
+  ingredients: PropTypes.array,
+  linkUrl: PropTypes.string,
+  id: PropTypes.number,
+  addFavorite: PropTypes.func,
+  authUser: PropTypes.bool
+};

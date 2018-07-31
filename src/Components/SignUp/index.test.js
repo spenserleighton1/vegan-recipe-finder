@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SignUpForm } from './';
+import { SignUpPage } from './';
 import { auth } from '../../firebase'
 
-describe('SignUpForm', () => {
+describe('SignUpPage', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<SignUpForm />)
+    wrapper = shallow(<SignUpPage />)
   })
 
-  it('should start with default state of username,. email, pWord1 pWord2, and error', () => {
+  it('should start with default state of username, email, pWord1 pWord2, and error', () => {
     const actual = wrapper.state()
     const expected = {email: "", error: null, passwordOne: "", passwordTwo: "", username: ""}
 
