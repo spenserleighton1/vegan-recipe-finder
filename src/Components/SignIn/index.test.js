@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SignInForm } from './';
+import { SignInPage } from './';
 import { auth } from '../../firebase'
 
 jest.mock('../../firebase');
@@ -9,7 +9,7 @@ describe('SignInForm', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<SignInForm />)
+    wrapper = shallow(<SignInPage />)
   })
   it('should have default state of email, password and error', () => {
     const actual = wrapper.state()

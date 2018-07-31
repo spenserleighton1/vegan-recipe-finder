@@ -12,6 +12,7 @@
 /src/Components/SavedRecipeContainer/index.test.js
 /src/Components/SavedRecipeDetails/index.test.js
 /src/Components/SingleRecipeContainer/index.test.js
+/src/Components/SavedRecipeDetailsCard/index.test.js
 
 /src/helper/__mocks__/apiCalls.js
 /src/helper/__mocks__/dataCleaner.js
