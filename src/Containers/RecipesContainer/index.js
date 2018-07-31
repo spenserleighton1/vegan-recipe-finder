@@ -8,7 +8,7 @@ import Loader from '../../Components/Loader'
 import './styles.css';
 
 export class RecipesContainer extends Component {
-
+  
   fetchRecipe = async (key, id) => {
     this.props.isLoading(true)
     const results = await fetchSingleRecipe(key,id)
