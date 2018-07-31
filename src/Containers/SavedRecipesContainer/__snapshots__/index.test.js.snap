@@ -147,8 +147,8 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "function",
+        "key": "0",
+        "nodeType": "class",
         "props": Object {
           "authUser": Object {
             "uid": 666,
@@ -161,8 +161,8 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
-        "nodeType": "function",
+        "key": "1",
+        "nodeType": "class",
         "props": Object {
           "authUser": Object {
             "uid": 666,
@@ -231,8 +231,8 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "function",
+          "key": "0",
+          "nodeType": "class",
           "props": Object {
             "authUser": Object {
               "uid": 666,
@@ -245,8 +245,8 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "function",
+          "key": "1",
+          "nodeType": "class",
           "props": Object {
             "authUser": Object {
               "uid": 666,

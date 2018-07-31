@@ -1,26 +1,19 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-// import { SignUpLink } from '../SignUp';
 import { auth } from '../../firebase';
-import './styles.css'
+import PropTypes from 'prop-types';
+import './styles.css';
 
-
-const SignInPage = ({ history }) =>
-  <div className='sign-in'>
-    <h2>SignIn</h2>
-    <SignInForm history={history} />
-  </div>
-
-class SignInForm extends Component {
+class SignInPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       email: '',
       password: '',
-      error: null,
+      error: null
     };
-  };
+  }
 
   onSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +25,7 @@ class SignInForm extends Component {
         this.setState(() => ({
           email: '',
           password: '',
-          error: null,
+          error: null
         }));
         this.props.history.push('/');
       })
@@ -44,7 +37,7 @@ class SignInForm extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   render() {
@@ -53,37 +46,40 @@ class SignInForm extends Component {
       this.state.email === '';
 
     return (
-      <form onSubmit={ this.onSubmit }>
-        <input
-          name="email"
-          value={ this.state.email }
-          onChange={ this.handleChange }
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="password"
-          value={ this.state.password }
-          onChange={ this.handleChange }
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={ isInvalid } type="submit">
-          Sign In
-        </button>
+      <div className='sign-in'>
+        <h2>SignIn</h2>
+        <form onSubmit={ this.onSubmit }>
+          <input
+            name="email"
+            value={ this.state.email }
+            onChange={ this.handleChange }
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            name="password"
+            value={ this.state.password }
+            onChange={ this.handleChange }
+            type="password"
+            placeholder="Password"
+          />
+          <button disabled={ isInvalid } type="submit">
+            Sign In
+          </button>
           <p>
             Don't have an account?
-            {' '}
-            <Link to={'/signUp'}>Sign Up</Link>
+            <Link to={'/signUp'}> Sign Up</Link>
           </p>
-        <p>{ this.state.error }</p>
-      </form>
+          <p>{ this.state.error }</p>
+        </form>
+      </div>
     );
   }
 }
 
 export default withRouter(SignInPage);
 
-export {
-  SignInForm,
+SignInPage.propTypes = {
+  history: PropTypes.object.isRequired
 };
+

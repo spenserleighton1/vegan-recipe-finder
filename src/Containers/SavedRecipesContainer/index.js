@@ -4,53 +4,50 @@ import { fetchSingleRecipe } from '../../helper/apiCalls';
 import { cleanRecipe } from '../../helper/dataCleaner';
 import { apiKey } from '../../helper/apiKey';
 import SavedRecipeDetailsCard from '../../Components/SavedRecipeDetailsCard';
-import { docRef } from '../../firebase';
 import { saveRecipe, deleteRecipe, addSavedRecipes } from '../../actions';
-import { Link } from 'react-router-dom'
-import Loader from '../../Components/Loader';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 export class SavedRecipesContainer extends Component {
   constructor() {
-    super()
-    this.state = { loading: false }
+    super();
+    this.state = { loading: false };
   }
 
   componentDidMount() {
-    this.fetchRecipes(apiKey)
+    this.fetchRecipes(apiKey);
   }
 
   fetchRecipes = (key) => {
-    this.setState({ loading: true })
+    this.setState({ loading: true });
     this.props.savedRecipeIDs.map(async rId => {
-      const results = await fetchSingleRecipe(key, rId)
-      const recipe = await cleanRecipe(results)
-      this.props.addSavedRecipes(recipe)
-      this.setState({ loading: false })
-    })
+      const results = await fetchSingleRecipe(key, rId);
+      const recipe = await cleanRecipe(results);
+      this.props.addSavedRecipes(recipe);
+      this.setState({ loading: false });
+    });
   }
-  //saved recipes in redux store empties but not supersaved recipes
   
   addFavorite = (id) => {
-    const { uid } = this.props.authUser 
-    this.props.saveRecipe(id)
+    this.props.saveRecipe(id);
   }
 
   render() {
-    const recipesToDisplay = this.props.savedRecipesFull.map(recipe => {
-      console.log(recipe)
+    const recipesToDisplay = this.props.savedRecipesFull.map((recipe, index) => {
       return <SavedRecipeDetailsCard {...recipe}
-        authUser={ this.props.authUser } />
-    })
-    if(this.props.savedRecipesFull.length) {
+        key={ index }
+        authUser={ this.props.authUser } />;
+    });
+    if (this.props.savedRecipesFull.length) {
       return (
         <div className='saved-recipes-container'>
           <Link className='home-btn' exact to="/">Home</Link>
           { recipesToDisplay }
         </div>
-      )
+      );
     } else {
-      return <p></p>
+      return <p></p>;
     }
   }
 }
@@ -58,12 +55,21 @@ export class SavedRecipesContainer extends Component {
 export const mapStateToProps = (state) => ({
   savedRecipeIDs: state.savedRecipeIDs,
   savedRecipesFull: state.savedRecipesFull
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   addSavedRecipes: (savedRecipes) => dispatch(addSavedRecipes(savedRecipes)),
   saveRecipe: (id) => dispatch(saveRecipe(id)),
   deleteRecipe: (id) => dispatch(deleteRecipe(id))
-})
+});
 
-export default connect(mapStateToProps,mapDispatchToProps)(SavedRecipesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SavedRecipesContainer);
+
+SavedRecipesContainer.propTypes = {
+  authUser: PropTypes.object.isRequired,
+  savedRecipeIDs: PropTypes.array.isRequired,
+  addSavedRecipes: PropTypes.func.isRequired,
+  saveRecipe: PropTypes.func.isRequired,
+  savedRecipesFull: PropTypes.array.isRequired
+
+};
