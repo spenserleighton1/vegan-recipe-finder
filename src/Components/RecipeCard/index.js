@@ -17,7 +17,7 @@ export default RecipeCard;
       
 RecipeCard.propTypes = {
   recipeTitle: PropTypes.string,
-  recipeImage: PropTypes.url,
+  recipeImage: PropTypes.string,
   fetchRecipe: PropTypes.func,
   recipeId: PropTypes.number
 };

@@ -68,5 +68,5 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 App.propTypes = {
   isLoading: PropTypes.func.isRequired,
   addRecipes: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool
 };

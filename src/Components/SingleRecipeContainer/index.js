@@ -47,8 +47,8 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(SingleRecipeContainer);
 
 SingleRecipeContainer.propTypes = {
-  authUser: PropTypes.object.isRequired,
-  saveRecipeID: PropTypes.func.isRequired,
-  savedRecipeIDs: PropTypes.array.isRequired,
-  recipe: PropTypes.object.isRequired
+  authUser: PropTypes.object,
+  saveRecipeID: PropTypes.func,
+  savedRecipeIDs: PropTypes.array,
+  recipe: PropTypes.object
 };

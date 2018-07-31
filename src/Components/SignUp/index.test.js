@@ -11,7 +11,6 @@ describe('SignUpPage', () => {
   })
 
   it('should start with default state of username, email, pWord1 pWord2, and error', () => {
-    console.log(wrapper)
     const actual = wrapper.state()
     const expected = {email: "", error: null, passwordOne: "", passwordTwo: "", username: ""}
 

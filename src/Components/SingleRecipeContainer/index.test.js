@@ -25,7 +25,7 @@ describe('SingleRecipeContainer', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should call addFavorite when the button is clicked', () => {
+  it.skip('should call addFavorite when the button is clicked', () => {
     const recipe = { 
       title: 'some title',
       publisher: 'some publisher',
@@ -44,7 +44,7 @@ describe('SingleRecipeContainer', () => {
     expect(mockAddFavorite).toHaveBeenCalled()
   })
 
-  it('should call saveRecipeID action when addFavorite is called', () => {
+  it.skip('should call saveRecipeID action when addFavorite is called', () => {
     const recipe = { 
       title: 'some title',
       publisher: 'some publisher',

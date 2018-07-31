@@ -26,8 +26,8 @@ RecipeDetailsCard.propTypes = {
   title: PropTypes.string,
   publisher: PropTypes.string,
   ingredients: PropTypes.array,
-  linkUrl: PropTypes.url,
+  linkUrl: PropTypes.string,
   id: PropTypes.number,
   addFavorite: PropTypes.func,
-  authUser: PropTypes.object
+  authUser: PropTypes.bool
 };

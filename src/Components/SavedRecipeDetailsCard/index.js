@@ -22,7 +22,7 @@ class SavedRecipeCard extends Component {
       <div className='recipe-card'>
         <h3 className='recipe-title'>{ title }</h3>
         <img className='recipe-img' src={ image } alt={ title } />
-        <button onClick={() => { this.handleClick(); } }> Details </button>;
+        <button onClick={() => { this.handleClick(); } }> Details </button>
         { details }
       </div>
     );
@@ -33,7 +33,7 @@ export default SavedRecipeCard;
       
 SavedRecipeCard.propTypes = {
   title: PropTypes.string,
-  image: PropTypes.url,
+  image: PropTypes.string,
   ingredients: PropTypes.array,
-  linkUrl: PropTypes.url
+  linkUrl: PropTypes.string
 };

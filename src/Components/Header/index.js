@@ -43,6 +43,6 @@ const HeaderNonAuth = () => {
 export default Header;
 
 Header.propTypes = {
-  authUser: PropTypes.object
+  authUser: PropTypes.bool
 };
 

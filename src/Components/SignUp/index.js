@@ -98,5 +98,5 @@ export class SignUpPage extends Component {
 export default withRouter(SignUpPage);
 
 SignUpPage.propTypes = {
-  history: PropTypes.object.isRequired
+  history: PropTypes.object
 };
