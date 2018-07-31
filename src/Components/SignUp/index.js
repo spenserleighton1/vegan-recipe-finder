@@ -1,26 +1,27 @@
- import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { auth } from '../../firebase';
-import './styles.css'
+import PropTypes from 'prop-types';
+import './styles.css';
 
 const SignUpPage = ({ history }) =>
   <div className='sign-up'>
     <h1>SignUp</h1>
     <SignUpForm history={history} />
-  </div>
+  </div>;
 
 class SignUpForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-    username: '',
-    email: '',
-    passwordOne: '',
-    passwordTwo: '',
-    error: null,
+      username: '',
+      email: '',
+      passwordOne: '',
+      passwordTwo: '',
+      error: null
     };
-  };
+  }
 
   onSubmit = (event) => {
     event.preventDefault();
@@ -33,9 +34,9 @@ class SignUpForm extends Component {
           email: '',
           passwordOne: '',
           passwordTwo: '',
-          error: null,
+          error: null
         }));
-      this.props.history.push('/');
+        this.props.history.push('/');
       })
       .catch(error => this.setState({ error: error.message }));
 
@@ -43,7 +44,7 @@ class SignUpForm extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   render() {
@@ -57,41 +58,41 @@ class SignUpForm extends Component {
     return (
       <form className='signup-form' onSubmit={this.onSubmit}>
       Username: 
-       <input
-        name="username"
-        value={this.state.username}
-        onChange={ this.handleChange }
-        type="text"
-        placeholder="Full Name"
-      />
-      Email: 
-      <input
-        name="email"
-        value={this.state.email}
-        onChange={ this.handleChange }
-        type="text"
-        placeholder="Email Address"
-      />
-      Password: 
-      <input
-        name="passwordOne"
-        value={this.state.passwordOne}
-        onChange={ this.handleChange }
-        type="password"
-        placeholder="Password"
-      />
-      Confirm Password: 
-      <input
-        name="passwordTwo"
-        value={this.state.passwordTwo}
-        onChange={ this.handleChange }
-        type="password"
-        placeholder="Confirm Password"
-      />
-      <button disabled={isInvalid} type="submit">
-        Sign Up
-      </button>
-      <p>{this.state.error}</p>
+        <input
+          name="username"
+          value={this.state.username}
+          onChange={ this.handleChange }
+          type="text"
+          placeholder="Full Name"
+        />
+        Email: 
+        <input
+          name="email"
+          value={this.state.email}
+          onChange={ this.handleChange }
+          type="text"
+          placeholder="Email Address"
+        />
+        Password: 
+        <input
+          name="passwordOne"
+          value={this.state.passwordOne}
+          onChange={ this.handleChange }
+          type="password"
+          placeholder="Password"
+        />
+        Confirm Password: 
+        <input
+          name="passwordTwo"
+          value={this.state.passwordTwo}
+          onChange={ this.handleChange }
+          type="password"
+          placeholder="Confirm Password"
+        />
+        <button disabled={isInvalid} type="submit">
+          Sign Up
+        </button>
+        <p>{this.state.error}</p>
       </form>
     );
   }
@@ -100,3 +101,7 @@ class SignUpForm extends Component {
 export default withRouter(SignUpPage);
 
 export { SignUpForm };
+
+SignUpPage.propTypes = {
+  history: PropTypes.object.isRequired
+};

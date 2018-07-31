@@ -30,7 +30,7 @@ describe('savedRecipesReducer', () => {
       "recipeImage": "cuter picture", 
       "recipeLink": "evenbetterlink.com", 
       "recipeTitle": "another good food"}]];
-    const results = savedRecipesReducer(undefined, actions.addSavedRecipes(recipes));
+    const results = savedRecipesReducer(undefined, actions.addSavedRecipes(recipes)); 
 
     expect(results).toEqual(expected);
   });

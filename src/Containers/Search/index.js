@@ -4,27 +4,28 @@ import { fetchRecipes } from '../../helper/apiCalls';
 import { apiKey } from '../../helper/apiKey';
 import { cleanData } from '../../helper/dataCleaner';
 import { addRecipes } from '../../actions';
+import PropTypes from 'prop-types';
 import './styles.css';
 
 
 export class Search extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       userInput: ''
-    }
+    };
   }
   
   handleChange = (event) => {
-    this.setState({ userInput: event.target.value })
+    this.setState({ userInput: event.target.value });
   }
 
   handleSubmit = async (event) => {
-    event.preventDefault()
-    const results = await fetchRecipes(apiKey,this.state.userInput);
+    event.preventDefault();
+    const results = await fetchRecipes(apiKey, this.state.userInput);
     const recipes = await cleanData(results.recipes);
-    this.props.addRecipes(recipes)
+    this.props.addRecipes(recipes);
   }
 
   render() {
@@ -39,12 +40,16 @@ export class Search extends Component {
         <button
           className='search-btn'>Search</button>
       </form>
-      )
-    }
+    );
   }
+}
 
 export const mapDispatchToProps = (dispatch) => ({
   addRecipes: (recipes)=> dispatch(addRecipes(recipes))
-})
+});
 
 export default connect(null, mapDispatchToProps)(Search);
+
+Search.propTypes = {
+  addRecipes: PropTypes.func.isRequired
+};
