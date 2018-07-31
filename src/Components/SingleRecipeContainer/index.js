@@ -34,6 +34,7 @@ export class SingleRecipeContainer extends Component {
 }
 
 export const mapStateToProps = (state) => ({
+  loading: state.loading,
   recipe: state.singleRecipe,
   savedRecipeIDs: state.savedRecipeIDs
 });

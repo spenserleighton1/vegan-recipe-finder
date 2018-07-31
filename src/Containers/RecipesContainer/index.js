@@ -8,7 +8,7 @@ import Loader from '../../Components/Loader'
 import './styles.css';
 
 export class RecipesContainer extends Component {
-
+  
   fetchRecipe = async (key, id) => {
     this.props.isLoading(true)
     const results = await fetchSingleRecipe(key,id)
@@ -17,18 +17,18 @@ export class RecipesContainer extends Component {
     this.props.isLoading(false)
   }
 
-  recipesToDisplay = () => (
-    this.props.recipes.map((recipe, index) => {
-    return <RecipeCard {...recipe} 
-                  key={ index }
-                  fetchRecipe={ this.fetchRecipe }/>
-    })
-  ) 
-
 render() {
-  const loaded = this.props.loading ? <Loader /> :  this.recipesToDisplay()
+  const recipesToDisplay = this.props.recipes.map((recipe, index) => {
+    return <RecipeCard {...recipe} 
+              key={ index }
+              fetchRecipe={ this.fetchRecipe }/>
+    })
+  const loaded = this.props.loading ? <Loader /> :  recipesToDisplay
+
   return (
-    <div className='recipes-container'>{ loaded }</div>
+    <div className='recipes-container'>
+      { loaded }
+    </div>
     )
   }
 }

@@ -8,9 +8,7 @@ const RecipeCard = ({ recipeTitle, recipeLink, recipeImage, fetchRecipe, recipeI
     <div className='recipe-card'>
       <h3 className='recipe-title'>{ recipeTitle }</h3>
       <img className='recipe-img' src={ recipeImage } alt={ recipeTitle } />
-      
       <button className='recipe-btn' onClick={ () => { fetchRecipe(apiKey, recipeId) } }>view recipe</button>
-      
     </div>
     )
 }
