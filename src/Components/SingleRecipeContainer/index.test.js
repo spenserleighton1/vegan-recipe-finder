@@ -71,7 +71,7 @@ describe('SingleRecipeContainer', () => {
       const mappedProps = mapDispatchToProps(mockDispatch);
       const actionToDispatch = saveRecipe({id: 666})
 
-      mappedProps.saveRecipeID({id: 666})
+      mappedProps.saveRecipeID({id: 666}) 
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     })
 
