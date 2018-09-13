@@ -1,16 +1,15 @@
-# Recipe Finder
-## Overview
+# Vegan Recipe Finder
+### Overview
+Web App to help struggling folks find mostly meat free recipes. Built as a personal project in the third module of Turing School of Software and Design. Hours to build: 65.
 
-Web App to help struggling folks find mostly meat free recipes.
-
-Set Up Instructions 
+### Setup 
 ```
 npm install
 npm start
 ```
 
 
-## Screenshots
+### Screenshots
 Home Page
 ![HomePage](./src/Images/home-page.png "recipe finder home")
 
@@ -19,3 +18,6 @@ Sign In Page
 
 Recipe Details
 ![details](./src/Images/details.png "details page")
+
+### Learning Goals
+Solidy knowledge of React, Redux, Router, Jest and Enzyme, as well as Promises.
